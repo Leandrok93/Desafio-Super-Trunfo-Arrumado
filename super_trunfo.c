@@ -8,8 +8,9 @@ int main() {
     int populacao1; //Numero de Habitantes
     float pib1; //PIB da cidade
     float area1; //Área em km²
-    float densidade1; //Densidade Populacional
-    float pib_per_capita1; //Pib per capita
+    float densidade1 = (populacao1 / area1); //Densidade Populacional
+    float pib_per_capita1 = (pib1 / populacao1); //Pib per capita
+    
 
     char estado2; // Nome do Estado
     char codigo2[5]; //Código da Carta
@@ -18,19 +19,21 @@ int main() {
     int populacao2; //Numero de Habitantes
     float pib2; //PIB da cidade
     float area2; //Área em km²
-    float densidade2; //Densidade Populacional
-    float pib_per_capita2; //Pib per capita
+    float densidade2 = (populacao2 / area2); //Densidade Populacional
+    float pib_per_capita2 = (pib2 / populacao2); //Pib per capita
+
+
 
     printf("Carta 1 \n"); //Iniciando Perguntas da Carta 1
 
     printf("Por favor informe uma letra de 'A' a 'H' (representando um dos oito estados): \n");
-    scanf(" %c", &estado1);
+    scanf("%c", &estado1);
 
     printf("Por favor informe o código da cidade (A letra do estado seguida de um número de 01 a 04): \n");
-    scanf(" %s", codigo1);
+    scanf("%s", codigo1);
 
     printf("Por favor informe o nome da cidade: \n");
-    scanf(" %s", nome1);
+    scanf("%s", nome1);
 
     printf("Por favor informe o número de habitantes da cidade: \n");
     scanf("%d", &populacao1);
@@ -50,13 +53,13 @@ int main() {
     printf("Carta 2 \n"); //Iniciando Perguntas da Carta 2
 
     printf("Por favor informe uma letra de 'A' a 'H' (representando um dos oito estados): \n");
-    scanf(" %c", &estado2);
+    scanf("%c", &estado2);
 
     printf("Por favor informe o código da cidade (A letra do estado seguida de um número de 01 a 04): \n");
-    scanf(" %s", codigo2);
+    scanf("%s", codigo2);
 
     printf("Por favor informe o nome da cidade: \n");
-    scanf(" %s", nome2);
+    scanf("%s", nome2);
 
     printf("Por favor informe o número de habitantes da cidade: \n");
     scanf("%d", &populacao2);
@@ -74,9 +77,6 @@ int main() {
     
     //Iniciando a exibição dos Dados da Carta 1
     
-    densidade1 = populacao1 / area1;
-    pib_per_capita1 = pib1 / populacao1;
-    
     printf("Carta 01\n");
     printf("Estado: %c\n", estado1);
     printf("Código da Carta: %s\n", codigo1);
@@ -93,9 +93,6 @@ int main() {
     printf("\n");
 
     //Iniciando exibição dos Dados da Carta 2
-
-    densidade2 = populacao2 / area2;
-    pib_per_capita2 = pib2 / populacao2;
 
     printf("Carta 02\n");
     printf("Estado: %c\n", estado2);
